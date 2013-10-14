@@ -1,0 +1,92 @@
+#.gitignore
+
+# Railo files #
+######################
+WEB-INF/
+
+# Sublime files #
+######################
+*.sublime-project
+*.sublime-workspace
+
+# Misc files #
+######################
+*.yml
+*.buildpath
+*.settings
+*.cache
+*.swp
+
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+.project
+
+# Eclipse files #
+#######################
+.project
+.settings/
+.classpath
+.metadata
+
+# Intellij #
+#######################
+.idea/
+*.iml
+*.iws
+
+# VIM Ignores #
+#######################
+*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# C Ignores #
+#######################
+# Object files
+*.o
+
+# Libraries
+*.lib
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# C++ Ignores #
+########################
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Java Ignores #
+########################
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear

@@ -1,0 +1,17 @@
+[user]
+	name = Rohit Sinha
+	email = talktorohit54@gmail.com
+[merge]
+	tool = vimdiff
+[core]
+	excludesfile = /Users/rohitsinha/.gitignore_global
+[alias]
+	co = checkout
+	cob = checkout -b
+	c = commit
+	cm = commit -m
+	a = add
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	
