@@ -1,10 +1,10 @@
 [user]
 	name = Rohit Sinha
 	email = talktorohit54@gmail.com
-[merge]
-	tool = vimdiff
 [core]
-	excludesfile = /Users/rohitsinha/.gitignore_global
+	excludesfile = /Users/rsinha/.gitignore_global
+	editor = vim
+	autocrlf = input
 [alias]
 	co = checkout
 	cob = checkout -b
@@ -13,5 +13,26 @@
 	a = add
 	st = status
 	br = branch
-	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-	
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	brsort = for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:iso8601)%09%(refname)' refs/heads
+	amend = commit --amend
+	# Get the current branch name (not so useful in itself, but used in other aliases)
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+	# Push the current branch to the remote "origin", and set it to track the upstream branch
+	publish = "!git push -u origin $(git branch-name)"
+	publish-force = "!git push -u origin $(git branch-name) -f"
+	# Delete the remote version of the current branch
+	unpublish = "!git push origin :$(git branch-name)"
+
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[push]
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
