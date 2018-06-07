@@ -1,5 +1,28 @@
 #.gitignore
 
+# Python #
+######################
+env/
+venv/
+
+*.py[cod]
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+__pycache__
+
 # Railo files #
 ######################
 WEB-INF/
@@ -37,6 +60,12 @@ Thumbs.db
 .idea/
 *.iml
 *.iws
+
+# CMake and CLion #
+#######################
+# CMake
+cmake-build-debug/
+
 
 # VIM Ignores #
 #######################
@@ -90,3 +119,28 @@ Session.vim
 *.jar
 *.war
 *.ear
+
+# Build and Target Ignores #
+########################
+bin/
+target/
+
+# Xcode #
+########
+.DS_Store
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
